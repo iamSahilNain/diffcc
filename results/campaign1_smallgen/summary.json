@@ -1,0 +1,39 @@
+{
+  "origin": "smallgen",
+  "n": 4000,
+  "seed0": 10000,
+  "started": "2026-10-11 11:26:52",
+  "configs": [
+    "apple-clang-O0",
+    "apple-clang-O1",
+    "apple-clang-O2",
+    "apple-clang-O3",
+    "apple-clang-Os",
+    "llvm-clang-O0",
+    "llvm-clang-O1",
+    "llvm-clang-O2",
+    "llvm-clang-O3",
+    "llvm-clang-Os",
+    "gcc-O0",
+    "gcc-O1",
+    "gcc-O2",
+    "gcc-O3",
+    "gcc-Os"
+  ],
+  "compilers": {
+    "/usr/bin/clang": "Apple clang version 17.0.0 (clang-1700.6.3.2)",
+    "/opt/homebrew/opt/llvm/bin/clang": "Homebrew clang version 22.1.2",
+    "/opt/homebrew/bin/gcc-15": "gcc-15 (Homebrew GCC 15.2.0_1) 15.2.0"
+  },
+  "counts": {
+    "agree": 4000,
+    "diverge": 0,
+    "compiler-crash": 0,
+    "ub": 0,
+    "all-timeout": 0,
+    "harness-error": 0,
+    "gen-error": 0
+  },
+  "candidates": [],
+  "finished": "2026-10-11 13:11:36"
+}

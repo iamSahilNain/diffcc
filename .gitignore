@@ -4,3 +4,4 @@ results/*/campaign.jsonl
 results/*/candidates/*.c
 !results/README.md
 .pytest_cache/
+*.egg-info/
