@@ -56,7 +56,8 @@ the source of every candidate under `candidates/`.
 
 Verdicts: `agree`, `diverge` (two configs print different output or exit
 differently), `compiler-crash` (a config fails or times out compiling a
-sanitizer-clean program), `ub` (rejected by the gate), `all-timeout`,
+sanitizer-clean program), `ub` (rejected by the gate), `san-timeout` (too
+slow to finish under ASan, skipped: not evidence of UB), `all-timeout`,
 `harness-error` (the sanitizer build itself failed: a toolchain problem,
 never counted as UB).
 

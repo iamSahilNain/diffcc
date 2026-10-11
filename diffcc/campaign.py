@@ -34,7 +34,7 @@ def run_campaign(origin: str, n: int, seed0: int, out_dir: str, configs: list[Co
         "origin": origin, "n": n, "seed0": seed0, "started": time.strftime("%Y-%m-%d %H:%M:%S"),
         "configs": [c.name for c in configs],
         "compilers": {c.cc: compiler_version(c.cc) for c in {c.cc: c for c in configs}.values()},
-        "counts": {"agree": 0, "diverge": 0, "compiler-crash": 0, "ub": 0, "all-timeout": 0, "harness-error": 0, "gen-error": 0},
+        "counts": {"agree": 0, "diverge": 0, "compiler-crash": 0, "ub": 0, "san-timeout": 0, "all-timeout": 0, "harness-error": 0, "gen-error": 0},
         "candidates": [],
     }
     log_path = os.path.join(out_dir, "campaign.jsonl")

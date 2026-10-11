@@ -1,0 +1,45 @@
+[10/300] {'agree': 7, 'diverge': 0, 'compiler-crash': 0, 'ub': 3, 'all-timeout': 0, 'harness-error': 0, 'gen-error': 0}
+[20/300] {'agree': 14, 'diverge': 0, 'compiler-crash': 0, 'ub': 6, 'all-timeout': 0, 'harness-error': 0, 'gen-error': 0}
+[30/300] {'agree': 23, 'diverge': 0, 'compiler-crash': 0, 'ub': 7, 'all-timeout': 0, 'harness-error': 0, 'gen-error': 0}
+[40/300] {'agree': 32, 'diverge': 0, 'compiler-crash': 0, 'ub': 8, 'all-timeout': 0, 'harness-error': 0, 'gen-error': 0}
+[50/300] {'agree': 42, 'diverge': 0, 'compiler-crash': 0, 'ub': 8, 'all-timeout': 0, 'harness-error': 0, 'gen-error': 0}
+[60/300] {'agree': 50, 'diverge': 0, 'compiler-crash': 0, 'ub': 10, 'all-timeout': 0, 'harness-error': 0, 'gen-error': 0}
+[70/300] {'agree': 60, 'diverge': 0, 'compiler-crash': 0, 'ub': 10, 'all-timeout': 0, 'harness-error': 0, 'gen-error': 0}
+[80/300] {'agree': 69, 'diverge': 0, 'compiler-crash': 0, 'ub': 11, 'all-timeout': 0, 'harness-error': 0, 'gen-error': 0}
+[90/300] {'agree': 75, 'diverge': 0, 'compiler-crash': 0, 'ub': 15, 'all-timeout': 0, 'harness-error': 0, 'gen-error': 0}
+[100/300] {'agree': 84, 'diverge': 0, 'compiler-crash': 0, 'ub': 16, 'all-timeout': 0, 'harness-error': 0, 'gen-error': 0}
+[110/300] {'agree': 93, 'diverge': 0, 'compiler-crash': 0, 'ub': 17, 'all-timeout': 0, 'harness-error': 0, 'gen-error': 0}
+[120/300] {'agree': 102, 'diverge': 0, 'compiler-crash': 0, 'ub': 18, 'all-timeout': 0, 'harness-error': 0, 'gen-error': 0}
+[130/300] {'agree': 110, 'diverge': 0, 'compiler-crash': 0, 'ub': 20, 'all-timeout': 0, 'harness-error': 0, 'gen-error': 0}
+[140/300] {'agree': 119, 'diverge': 0, 'compiler-crash': 0, 'ub': 21, 'all-timeout': 0, 'harness-error': 0, 'gen-error': 0}
+[150/300] {'agree': 128, 'diverge': 0, 'compiler-crash': 0, 'ub': 22, 'all-timeout': 0, 'harness-error': 0, 'gen-error': 0}
+[160/300] {'agree': 134, 'diverge': 0, 'compiler-crash': 0, 'ub': 26, 'all-timeout': 0, 'harness-error': 0, 'gen-error': 0}
+[170/300] {'agree': 143, 'diverge': 0, 'compiler-crash': 0, 'ub': 27, 'all-timeout': 0, 'harness-error': 0, 'gen-error': 0}
+[180/300] {'agree': 153, 'diverge': 0, 'compiler-crash': 0, 'ub': 27, 'all-timeout': 0, 'harness-error': 0, 'gen-error': 0}
+[190/300] {'agree': 162, 'diverge': 0, 'compiler-crash': 0, 'ub': 28, 'all-timeout': 0, 'harness-error': 0, 'gen-error': 0}
+[200/300] {'agree': 170, 'diverge': 0, 'compiler-crash': 0, 'ub': 30, 'all-timeout': 0, 'harness-error': 0, 'gen-error': 0}
+[210/300] {'agree': 178, 'diverge': 0, 'compiler-crash': 0, 'ub': 32, 'all-timeout': 0, 'harness-error': 0, 'gen-error': 0}
+[220/300] {'agree': 186, 'diverge': 0, 'compiler-crash': 0, 'ub': 34, 'all-timeout': 0, 'harness-error': 0, 'gen-error': 0}
+[230/300] {'agree': 195, 'diverge': 0, 'compiler-crash': 0, 'ub': 35, 'all-timeout': 0, 'harness-error': 0, 'gen-error': 0}
+[240/300] {'agree': 202, 'diverge': 0, 'compiler-crash': 0, 'ub': 38, 'all-timeout': 0, 'harness-error': 0, 'gen-error': 0}
+[250/300] {'agree': 210, 'diverge': 0, 'compiler-crash': 0, 'ub': 40, 'all-timeout': 0, 'harness-error': 0, 'gen-error': 0}
+[260/300] {'agree': 220, 'diverge': 0, 'compiler-crash': 0, 'ub': 40, 'all-timeout': 0, 'harness-error': 0, 'gen-error': 0}
+[270/300] {'agree': 230, 'diverge': 0, 'compiler-crash': 0, 'ub': 40, 'all-timeout': 0, 'harness-error': 0, 'gen-error': 0}
+[280/300] {'agree': 240, 'diverge': 0, 'compiler-crash': 0, 'ub': 40, 'all-timeout': 0, 'harness-error': 0, 'gen-error': 0}
+[290/300] {'agree': 249, 'diverge': 0, 'compiler-crash': 0, 'ub': 41, 'all-timeout': 0, 'harness-error': 0, 'gen-error': 0}
+[300/300] {'agree': 257, 'diverge': 0, 'compiler-crash': 0, 'ub': 43, 'all-timeout': 0, 'harness-error': 0, 'gen-error': 0}
+{
+  "origin": "csmith",
+  "n": 300,
+  "counts": {
+    "agree": 257,
+    "diverge": 0,
+    "compiler-crash": 0,
+    "ub": 43,
+    "all-timeout": 0,
+    "harness-error": 0,
+    "gen-error": 0
+  }
+}
+candidates: 0 (see results/campaign1_csmith/summary.json)
+CSMITH_DONE

@@ -22,7 +22,7 @@ class BuildResult:
 @dataclass
 class ProgramVerdict:
     program_id: str
-    verdict: str           # "agree" | "diverge" | "compiler-crash" | "ub" | "all-timeout" | "harness-error"
+    verdict: str           # "agree" | "diverge" | "compiler-crash" | "ub" | "san-timeout" | "all-timeout" | "harness-error"
     results: list[BuildResult] = field(default_factory=list)
     groups: dict[str, list[str]] = field(default_factory=dict)  # output hash -> configs
     note: str = ""
@@ -60,6 +60,9 @@ def sanitizer_clean(cfg: Config, src: str, workdir: str, include: str | None,
     if r.status in ("compile-error", "compile-timeout"):
         # The sanitizer build failing is a harness or toolchain problem, never evidence of UB.
         return False, f"HARNESS {r.status}: {r.detail[:300]}"
+    if r.status == "run-timeout":
+        # Too slow under ASan to decide; not evidence of UB. Skipped, counted separately.
+        return False, "TIMEOUT under sanitizers"
     if r.status != "ok":
         return False, f"{r.status}: {r.detail[:300]}"
     if "runtime error" in r.detail or "AddressSanitizer" in r.detail or "UndefinedBehaviorSanitizer" in r.detail:
@@ -76,7 +79,8 @@ def check_program(program_id: str, src: str, configs: list[Config], san: Config 
         if san is not None:
             ok, why = sanitizer_clean(san, src, wd, include, compile_timeout, run_timeout * 3)
             if not ok:
-                return ProgramVerdict(program_id, "harness-error" if why.startswith("HARNESS") else "ub", note=why)
+                kind = "harness-error" if why.startswith("HARNESS") else "san-timeout" if why.startswith("TIMEOUT") else "ub"
+                return ProgramVerdict(program_id, kind, note=why)
         results = [build_and_run(c, src, wd, include, compile_timeout, run_timeout) for c in configs]
 
     verdict = ProgramVerdict(program_id, "agree", results=results)
