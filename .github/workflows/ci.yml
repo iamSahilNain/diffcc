@@ -1,0 +1,20 @@
+name: ci
+on: [push, pull_request]
+jobs:
+  test-and-fuzz:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: sudo apt-get update && sudo apt-get install -y clang gcc csmith creduce
+      - run: pip install pytest && pip install -e .
+      - run: python -m diffcc configs
+      - run: pytest -q
+      - name: short campaign (built-in generator)
+        run: python -m diffcc run --origin smallgen -n 150 --seed 1000 --out results/ci-smallgen --jobs 4
+      - name: short campaign (csmith)
+        run: python -m diffcc run --origin csmith -n 20 --seed 1000 --out results/ci-csmith --jobs 4 --run-timeout 20
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with: { name: results, path: results/ }

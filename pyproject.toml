@@ -1,0 +1,12 @@
+[project]
+name = "diffcc"
+version = "0.1.0"
+description = "Differential testing of C compilers: generate, compile everywhere, run, compare, reduce."
+requires-python = ">=3.10"
+dependencies = []
+
+[project.scripts]
+diffcc = "diffcc.cli:main"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

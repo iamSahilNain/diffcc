@@ -1,0 +1,2 @@
+[10/4000] {'agree': 10, 'diverge': 0, 'compiler-crash': 0, 'ub': 0, 'all-timeout': 0, 'harness-error': 0, 'gen-error': 0}
+[20/4000] {'agree': 20, 'diverge': 0, 'compiler-crash': 0, 'ub': 0, 'all-timeout': 0, 'harness-error': 0, 'gen-error': 0}
